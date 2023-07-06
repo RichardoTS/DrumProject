@@ -1,0 +1,10 @@
+body{
+    text-align: center;
+    background-color: #164b60;
+}
+h1{
+    font-size: 4rem;
+    color: #5ccaef;
+    font-family: 'Noto Sans', sans-serif;
+    text-shadow: 3px 0 #a2ff86;
+}
