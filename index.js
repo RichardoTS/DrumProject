@@ -5,10 +5,12 @@ for(let i = 0; i < numOfDrumBtns; i++){
         let buttonInnerHTML = this.innerHTML;
 
         makeSound(buttonInnerHTML);
+        btnAnimation(buttonInnerHTML);
     })
 }
 document.addEventListener("keydown", function(e){
-    makeSound(e.key)
+    makeSound(e.key);
+    btnAnimation(e.key);
 })
 
 function makeSound(key){
@@ -42,4 +44,13 @@ function makeSound(key){
             snare.play();
             break;
     }
+}
+
+function btnAnimation(currentKey){
+    let activeBtn = document.querySelector("."+currentKey);
+    activeBtn.classList.add("pressed");
+
+    setTimeout(function(){
+        activeBtn.classList.remove("pressed");
+    })
 }
